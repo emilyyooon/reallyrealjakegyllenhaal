@@ -13,6 +13,8 @@
     margin: 0;
     top: 0;
     left: 0;
+    grid-template-columns: 2;
+    grid-template-rows: auto;
 }
 
 
@@ -63,5 +65,13 @@
 
 .chat {
     background-color: lightblue;
-    
+    width: 50%;
+    grid-column: 1;
+    grid-row: 
+}
+
+.avatar {
+    background-color: lightcoral;
+    width: 50%;
+    grid-column: 2;
 }
