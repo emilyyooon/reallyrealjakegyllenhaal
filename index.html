@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Really Real Jake Gyllenhaal</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/rivescript@latest/dist/rivescript.min.js"></script>
     <script src="script.js"></script>
 </head>
 <body>
-    <div class="container">
-
       <div class="marquee">
         <div class="marquee-content">
           <span class="marquee-item">Chat with Oscar Nominated Actor Jake Gyllenhaal Super Real!</span>
@@ -22,12 +21,39 @@
         </div>
       </div>
 
+    <div class="container">
       <div class="chat">
+        <div class="messages">
+          <div id="edge"></div>
 
+          <form class="actions">
+            <input type="text">
+          </form>
+          
+        </div>
       </div>
 
       <div class="avatar">
-        
+        <div class="options">
+          <button class="dapper" id="dapj" onClick="myFunction()">Dapper Jake</button>
+          <button class="shirtless" id="shij" onClick="myFunction2()">Shirtless Jake</button>
+          <button class="headphone" id="headj" onClick="myFunction3()">Headphone Jake</button>
+        </div>
+        <div class="jake">
+          <div id="dap">
+            <img id="one" src="images/dapper.png"/>
+          </div>
+          <div id="shirt">
+            <img id="two" src="images/shirtless.png"/>
+          </div>
+          <div id="head">
+            <img id="three" src="images/headphone.png"/>
+          </div>
+          <div id="bye">
+            <img id="four" src="images/goodbye.png"/>
+          </div>
+        </div>
+      
       </div>
     </div>
    
