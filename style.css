@@ -3,6 +3,10 @@
     src: url('Anthony.woff') format('woff');
 }
 
+.body {
+    
+}
+
 .container {
     display: flex;
     position: absolute;
@@ -67,8 +71,38 @@
 .chat {
     display: flex;
     width: 45vw;
+    height: 89%;
     margin-top: 5.2rem;
-    margin-left: 7rem;
+    margin-left: 9rem;
+    overflow-y: scroll;
+}
+.actions {
+    position: absolute;
+}
+.actions input {
+    font-family: anthony;
+    font-size: 3rem;
+    border-style: none;
+    border-top: 3px solid black;
+    width: 35vw;
+}
+#submit {
+    font-family: anthony;
+    width: 6vw;
+    margin: 0;
+    border-left: 3px solid black;
+    background-color: #DDFFA7;
+}
+#submit:hover {
+    cursor: pointer;
+}
+
+
+.messages div {
+    max-width: 50vw;
+    height: 100%;
+    display: block;
+    background-color: blue;
 }
 
 .avatar {
@@ -130,4 +164,3 @@
 #shirt, #head, #bye {
     display: none;
 }
-

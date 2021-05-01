@@ -4,6 +4,7 @@
     <title>Really Real Jake Gyllenhaal</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/rivescript@latest/dist/rivescript.min.js"></script>
+    <script src="dist/rivescript.min.js"></script>
     <script src="script.js"></script>
 </head>
 <body>
@@ -23,11 +24,12 @@
 
     <div class="container">
       <div class="chat">
-        <div class="messages">
+        <div class="messages" id="messages">
           <div id="edge"></div>
 
           <form class="actions">
-            <input type="text">
+            <input type="text" id="userinput">
+            <input type="submit" value="Send" id="submit" onclick="showInput();">
           </form>
           
         </div>
