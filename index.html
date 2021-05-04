@@ -1,63 +1,159 @@
 <!DOCTYPE html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Really Real Jake Gyllenhaal</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/rivescript@latest/dist/rivescript.min.js"></script>
-    <script src="dist/rivescript.min.js"></script>
-    <script src="script.js"></script>
-</head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript" src="js/datadumper.js"></script>
+  <script type="text/javascript" src="js/rivescript.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  </head>
 <body>
-      <div class="marquee">
-        <div class="marquee-content">
-          <span class="marquee-item">Chat with Oscar Nominated Actor Jake Gyllenhaal Super Real!</span>
-          <span class="marquee-item">Chat with Oscar Nominated Actor Jake Gyllenhaal Super Real!</span>
-          <span class="marquee-item">Chat with Oscar Nominated Actor Jake Gyllenhaal Super Real!</span>
-        </div>
-      </div>
+<div id="container">
 
-      <div class="title">
-        <div class="title-content">
-          <h1>Really Real Jake Gyllenhaal</h1>
-        </div>
-      </div>
-
-    <div class="container">
-      <div class="chat">
-        <div class="messages" id="messages">
-          <div id="edge"></div>
-
-          <form class="actions">
-            <input type="text" id="userinput">
-            <input type="submit" value="Send" id="submit" onclick="showInput();">
-          </form>
-          
-        </div>
-      </div>
-
-      <div class="avatar">
-        <div class="options">
-          <button class="dapper" id="dapj" onClick="myFunction()">Dapper Jake</button>
-          <button class="shirtless" id="shij" onClick="myFunction2()">Shirtless Jake</button>
-          <button class="headphone" id="headj" onClick="myFunction3()">Headphone Jake</button>
-        </div>
-        <div class="jake">
-          <div id="dap">
-            <img id="one" src="images/dapper.png"/>
-          </div>
-          <div id="shirt">
-            <img id="two" src="images/shirtless.png"/>
-          </div>
-          <div id="head">
-            <img id="three" src="images/headphone.png"/>
-          </div>
-          <div id="bye">
-            <img id="four" src="images/goodbye.png"/>
-          </div>
-        </div>
-      
+    <div id="marquee">
+      <div id="track">
+        <span class="track-content">Chat with Oscar Nominated Actor Jake Gyllenhaal Super Real</span>
+        <span class="track-content">Chat with Oscar Nominated Actor Jake Gyllenhaal Super Real</span>
+        <span class="track-content">Chat with Oscar Nominated Actor Jake Gyllenhaal Super Real</span>
+        <span class="track-content">Chat with Oscar Nominated Actor Jake Gyllenhaal Super Real</span>
+        <span class="track-content">Chat with Oscar Nominated Actor Jake Gyllenhaal Super Real</span>
       </div>
     </div>
-   
-</body>
-</html>
+
+    <div id="title">
+      <h1>Really Real Jake Gyllenhaal</h1>
+    </div>
+
+    <div id="chat">
+      <fieldset>
+        <div id="dialogue"></div>
+      </fieldset>
+      
+      <form onSubmit="return sendMessage()">
+        <fieldset>
+          <table class="input-table">
+            <tr>
+              <td class="text-box">
+                <input type="text" name="message" id="message" autocomplete="off">
+              </td>
+              <td class="send-button">
+                <input type="submit" id="submit" value="Send">
+              </td>
+            </tr>
+          </table>
+        </fieldset>
+      </form>
+    </div>
+
+
+    <div id="avatar">
+      <div id="options">
+        <button class="dapper" id="dapj" onClick="myFunction()">Dapper Jake</button>
+        <button class="shirtless" id="shij" onClick="myFunction2()">Shirtless Jake</button>
+        <button class="headphone" id="headj" onClick="myFunction3()">Headphone Jake</button>
+        </div>
+      <div id="jake">
+        <div id="dap">
+          <img id="one" src="images/dapper.png"/>
+          </div>
+          <div id="shirt">
+          <img id="two" src="images/shirtless.png"/>
+          </div>
+          <div id="head">
+          <img id="three" src="images/headphone.png"/>
+          </div>
+          <div id="bye">
+          <img id="four" src="images/goodbye.png"/>
+          </div>
+      </div>
+      <div id="byej" onClick="myFunction4()">
+        <img id="star" src="images/star.png"/>
+        <h2>TTYL<br>Jake!</h2>
+      </div>
+    </div>
+
+</div>
+
+  <script type="text/javascript">
+  var debugMode = false;
+  if (window.location.search.indexOf("debug=1") > -1) {
+    $("#toggle").val("Disable Debug Mode");
+    debugMode = true;
+  } else {
+    $("#toggle").val("Enable Debug Mode");
+  }
+  
+  if (window.location.protocol === "file:") {
+    document.querySelector("#local-file-error").style.display = "block";
+  }
+  var rs;
+  if (window.RiveScript === undefined) {
+    document.querySelector("#webpack-error").style.display = "block";
+  } else {
+  
+    rs = new RiveScript({
+      debug:   debugMode,
+      onDebug: onDebug
+    });
+  
+    rs.loadFile([
+      "js/brain.rive",
+    ]).then(onReady).catch(onError);
+  
+    rs.setSubroutine('fancyJSObject', function(rs, args){
+    });
+  }
+  
+
+
+  function onReady() {
+    $("#dialogue").append("<div><span class='bot'>Jake:</span> Hey you. Tell me what's on your mind.");
+    $("#message").removeAttr("disabled");
+    $("#message").attr("placeholder", "Send message to Jake");
+    $("#message").focus();
+    rs.sortReplies();
+  }
+  
+  function onError(err, filename, lineno) {
+    $("#dialogue").append('<div><span class="bot">Error:</span> ' + err + '</div>');
+  }
+  
+  function sendMessage () {
+    var text = $("#message").val();
+    $("#message").val("");
+    $("#dialogue").append("<div><span class='user'>You:</span> " + text + "</div>");
+  
+    rs.reply("soandso", text, this).then(function(reply) {
+      reply = reply.replace(/\n/g, "<br>");
+      $("#dialogue").append("<div><span class='bot'>Jake:</span> " + reply + "</div>");
+      $("#dialogue").animate({ scrollTop: $("#dialogue").height() }, 1000);
+    }).catch(function(e) {
+      window.alert(e.message + "\n" + e.line);
+      console.log(e);
+    });
+  
+    return false;
+  }
+  
+
+
+  function toggleDebug () {
+    if (debugMode) {
+      window.location = "?debug=0";
+    } else {
+      window.location = "?debug=1";
+    }
+  }
+  
+  function onDebug(message) {
+    if (debugMode) {
+      $("#debug").append("<div>[RS] " + escapeHtml(message) + "</div>");
+    }
+  }
+  
+  function escapeHtml(text) {
+    return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  }
+  </script>
+  </body>
+  </html>

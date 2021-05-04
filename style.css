@@ -1,166 +1,193 @@
 @font-face {
-    font-family: 'anthony';
-    src: url('Anthony.woff') format('woff');
+	font-family: 'anthony';
+	src: url('Anthony.woff') format('woff');
 }
-
-.body {
-    
+body {
+	background-color: white;
+	font-family: anthony;
+	font-size: 3rem;
+	color: #000000;
+	overflow: hidden;
+	margin: 0;
 }
-
-.container {
-    display: flex;
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    padding: 0;
-    margin: 0;
-    top: 0;
-    right: 0;
+div#container {
+	display: flex;
+	flex-direction: row;
+  	flex-wrap: wrap;
+  	align-items: stretch;
 }
-
-
-.marquee {
-    position: absolute;
-    overflow-x: hidden;
-    background-color: #DDFFA7;
-    font-family: anthony;
-    font-size: 3rem;
-    width: 100vw;
-    height: 4vh;
-    max-width: 100%;
-    white-space: nowrap;
-    padding-bottom: 1rem;
-    border-bottom: 3px solid black;
-
+div#marquee {
+	background-color: #DDFFA7;
+	width: 100vw;
+	flex-basis: 100%;
+	height: 5rem;
+	margin: 0;
+	border-bottom: 3px solid black;
+	overflow-x: hidden;
 }
-.marquee-content {
-    animation: marquee 10s linear infinite;
-}
-.marquee-item {
-    padding-right: 3rem;
+div#track {
+	position: absolute;
+	white-space: nowrap;
+	will-change: transform;
+	animation: marquee 10s linear infinite;
 }
 @keyframes marquee {
-    0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translate(-50%);
-      }
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-50%);
+	}
 }
 
 
-.title {
-    background-color: white;
-    border-right: 3px solid black;
-    width: 7rem;
-    height: 100%;
-    left: -1rem;
-    padding-right: 1rem;
-    position: fixed;
-    
+
+div#title {
+	width: 5%;
+	border-right: 3px solid black;
+	overflow: auto;
 }
-.title-content {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    font-family: anthony;
-    font-size: 2rem;
-    
+h1 {
+	width: 100vw;
+	
 }
 
-
-.chat {
-    display: flex;
-    width: 45vw;
-    height: 89%;
-    margin-top: 5.2rem;
-    margin-left: 9rem;
-    overflow-y: scroll;
+div#chat {
+	height: 95vh;
+	width: 40%;
 }
-.actions {
-    position: absolute;
+fieldset {
+	border-style: none;
+	border-right: 3px solid black;
+	padding: 0;
 }
-.actions input {
-    font-family: anthony;
-    font-size: 3rem;
-    border-style: none;
-    border-top: 3px solid black;
-    width: 35vw;
+input#message {
+	width: 100%;
+	height: 4.5rem;
+}
+div#dialogue {
+	overflow: auto;
+	height: 88.5vh;
+	width: 100%;
+	font-size: 3rem;
+}
+.bot {
+	padding: 1rem;
+}
+.user {
+	padding: 1rem;
+}
+#message {
+	font-family: anthony;
+	font-size: 3rem;
+	border-style: none;
+	border-top: 3px solid black;
 }
 #submit {
-    font-family: anthony;
-    width: 6vw;
-    margin: 0;
-    border-left: 3px solid black;
-    background-color: #DDFFA7;
+	font-family: anthony;
+	font-size: 3rem;
+	width: 15rem;
+	height: 5rem;
+	background-color: #DDFFA7;
+	border-style: none;
+	border-top: 3px solid black;
+	border-left: 3px solid black;
 }
-#submit:hover {
-    cursor: pointer;
+table.input-table {
+	border: 0px;
+	border-collapse: separate;
+	border-spacing: 4px;
+	width: 100%;
 }
-
-
-.messages div {
-    max-width: 50vw;
-    height: 100%;
-    display: block;
-    background-color: blue;
+table.input-table td.text-box {
+	text-align: left;
+	vertical-align: middle;
 }
-
-.avatar {
-    width: 55vw;
-    margin-top: 5.2rem;
-    border-left: 3px solid black;
-    display: flex;
-}
-.dapper, .shirtless, .headphone {
-    background-color: transparent;
-    width: 15rem;
-    height: 5rem;
-    border-style: solid;
-    border: 3px solid black;
-    font-family: anthony;
-    font-size: 2rem;
-}
-.dapper, .shirtless, .headphone:hover {
-    cursor: pointer;
+table.input-table td.send-button {
+	text-align: center;
+	vertical-align: middle;
+	width: 10px;
 }
 
 
 
-.jake {
-    width: 50%;
-    height: 100%;
-    margin: auto;
-    padding: 10px;
+
+div#avatar {
+	width: 54.75%;
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
 }
-#dap, #shirt, #head {
-    width: 100%;
-    height: 100%;
+div#options {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	padding-left: 3rem;
 }
+#dapj {
+	background-color: #DDFFA7;
+}
+#shij, #headj{
+	background-color: white;
+}
+#dapj, #shij, #headj {
+	border-style: none;
+	border: 3px solid black;
+	font-family: anthony;
+	font-size: 2rem;
+	padding: 1rem;
+}
+#dapj, #shij, #headj, #byej:hover {
+	cursor: pointer;
+}
+
+
+div#jake {
+	width: 50%;
+	height: 100%;
+	margin: auto;
+	padding: 0;
+}
+#shirt, #head, #bye {
+	display: none;
+}
+#dap, #shirt, #head, #bye {
+	width: 100%;
+	height: 100%;
+}
+
 #one {
-   width: 130%;
-   padding-top: 3rem;
+	width: 130%;
+	padding-top: 3rem;
 }
 #two {
-    width: 120%;
-    padding-top: 3rem;
-    padding-left: 5rem;
+	width: 120%;
+	padding-top: 3rem;
+	padding-left: 5rem;
 }
 #three {
-    width: 110%;
-    padding-top: 4rem;
+	width: 110%;
+	padding-top: 4rem;
 }
 #four {
-    width: 95%;
-    padding-top: 3rem;
-    padding-left: 2rem;
-}
-.options {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding-left: 3rem;
+	width: 95%;
+	padding-top: 3rem;
+	padding-left: 2rem;
 }
 
-#shirt, #head, #bye {
-    display: none;
+#byej {
+	background-color:lightpink;
+	height: 25vh;
+	display: flex;
+	
 }
+#star {
+	align-self: center;
+}
+h2 {
+	position: absolute;
+	font-size: 3rem;
+	text-align: center;
+	background-color: lightseagreen;
+}
+	
