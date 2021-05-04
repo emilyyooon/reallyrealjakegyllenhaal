@@ -123,6 +123,7 @@ div#options {
 	flex-direction: column;
 	justify-content: space-evenly;
 	padding-left: 3rem;
+	padding-right: 6rem;
 }
 #dapj {
 	background-color: #DDFFA7;
@@ -136,6 +137,8 @@ div#options {
 	font-family: anthony;
 	font-size: 2rem;
 	padding: 1rem;
+	width: 17rem;
+	height: 5rem;
 }
 #dapj, #shij, #headj, #byej:hover {
 	cursor: pointer;
@@ -147,6 +150,7 @@ div#jake {
 	height: 100%;
 	margin: auto;
 	padding: 0;
+	padding-left: 3rem;
 }
 #shirt, #head, #bye {
 	display: none;
@@ -157,29 +161,36 @@ div#jake {
 }
 
 #one {
-	width: 130%;
-	padding-top: 3rem;
+	width: 110%;
 }
 #two {
-	width: 120%;
-	padding-top: 3rem;
+	width: 125%;
 	padding-left: 5rem;
 }
 #three {
-	width: 110%;
+	width: 105%;
 	padding-top: 4rem;
-}
-#four {
-	width: 95%;
-	padding-top: 3rem;
 	padding-left: 2rem;
 }
+#four {
+	width: 125%;
+	padding-top: 3rem;
+}
 
+.byej-container {
+    display: flex;
+    align-items: flex-end;
+	padding-right: 3rem;
+	height: 90vh;
+}
 #byej {
-	background-color:lightpink;
-	height: 25vh;
+	background-color: transparent;
+	height: 30vh;
 	display: flex;
-	
+	animation-name: spin;
+  	animation-duration: 4000ms;
+  	animation-iteration-count: infinite;
+  	animation-timing-function: linear; 
 }
 #star {
 	align-self: center;
@@ -187,7 +198,15 @@ div#jake {
 h2 {
 	position: absolute;
 	font-size: 3rem;
-	text-align: center;
-	background-color: lightseagreen;
+	right: 8rem;
+	bottom: 9rem;
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
 }
 	
