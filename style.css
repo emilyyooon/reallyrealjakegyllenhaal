@@ -77,6 +77,7 @@ div#dialogue {
 .bot-container, .user-container {
 	padding: 1rem;
 	border-bottom: 3px solid black;
+	word-break: break-word;
 }
 #message {
 	font-family: anthony;
@@ -162,20 +163,19 @@ div#jake {
 }
 
 #one {
-	width: 110%;
+	width: 125%;
 }
 #two {
-	width: 125%;
+	width: 140%;
 	padding-left: 5rem;
 }
 #three {
-	width: 105%;
-	padding-top: 4rem;
+	width: 120%;
+	padding-top: 2rem;
 	padding-left: 2rem;
 }
 #four {
-	width: 125%;
-	padding-top: 3rem;
+	width: 145%;
 }
 
 .byej-container {

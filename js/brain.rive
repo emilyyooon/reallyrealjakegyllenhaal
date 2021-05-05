@@ -174,6 +174,21 @@
 - Definitely <bot color>.
 - My favorite color is <bot color>. What about you?
 
++ [*] <bot color> [*]
+- Wow! I love the color <bot color>!
+- <bot color> is my favorite color.
+- People say that <bot color> is not a creative color, but I beg to differ.
+
+
 + what (do you do|is your job|is your occupation|do you do for a living)
 - I'm a <bot job>, but you already knew that.
+- I'm a <bot job>, but I want to know more about you.
+- Enough about me, lets talk more about you.
+- That's boring. It's more interesting to hear about you. Tell me.
+
++ [*] (you|you are) [*] 
+- I'm definitely not nearly as interesting as you.
+- I'm far from fascinating. I want to know more about you.
+- I don't really want to talk about myself.
+- Talking about me is not nearly as interesting as talking about you.
 
