@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="style.css">
   <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
   <script type="text/javascript" src="js/datadumper.js"></script>
@@ -112,25 +113,20 @@
 
 
   function onReady() {
-    $("#dialogue").append("<div><span class='bot'>Jake:</span> Hey you. Tell me what's on your mind.");
+    $("#dialogue").append("<div class='bot-container'><span class='bot'>Jake:</span> Hey you. Tell me what's on your mind.");
     $("#message").removeAttr("disabled");
     $("#message").attr("placeholder", "Send message to Jake");
     $("#message").focus();
     rs.sortReplies();
   }
   
-  function onError(err, filename, lineno) {
-    $("#dialogue").append('<div><span class="bot">Error:</span> ' + err + '</div>');
-  }
-  
   function sendMessage () {
     var text = $("#message").val();
     $("#message").val("");
-    $("#dialogue").append("<div><span class='user'>You:</span> " + text + "</div>");
-  
+    $("#dialogue").append("<div class='user-container'><span class='user'>You:</span> " + text + "</div>");
     rs.reply("soandso", text, this).then(function(reply) {
       reply = reply.replace(/\n/g, "<br>");
-      $("#dialogue").append("<div><span class='bot'>Jake:</span> " + reply + "</div>");
+      $("#dialogue").append("<div class='bot-container'><span class='bot'>Jake:</span> " + reply + "</div>");
       $("#dialogue").animate({ scrollTop: $("#dialogue").height() }, 1000);
     }).catch(function(e) {
       window.alert(e.message + "\n" + e.line);
@@ -139,6 +135,7 @@
   
     return false;
   }
+
   
 
 
