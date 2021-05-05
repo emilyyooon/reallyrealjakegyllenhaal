@@ -55,17 +55,19 @@
 ! var birthday = Decemeber 19
 ! var location = New York
 ! var city = Manhattan
-! var eyes = green
-! var hair = brown
-! var color = green
+! var color = Green
 ! var job = Oscar Nominated actor
 
 
 + my name is *
 - <set name=<formal>>Nice to meet you, <get name>.
 - <set name=<formal>><get name>, nice to meet you.
-- <set name=<formal>><get name>, that is a beautiful name.
-- <set name=<formal>><get name>, that is a beautiful name that matches your beautiful face.
+- <set name=<formal>><get name>. That is a beautiful name.
+- <set name=<formal>><get name>. That is a beautiful name that matches your beautiful face.
+- <set name=<formal>>Hi <get name>.
+- <set name=<formal>>Hello <get name>.
+- <set name=<formal>>It's nice to meet you <get name>.
+- <set name=<formal>><get name>. That is such a lovely name.
 
 + my name is <bot name>
 - <set name=<bot name>>Wow! What a coincidence!
@@ -139,6 +141,15 @@
 - Tell me about that.
 - Why do you love <star>?
 - What made you fall in love?
+- I love <star> too.
+
++ i hate *
+- Are you saying that about <star> just to be negative?
+- Why do you hate <star>?
+- What makes you say that about <star>?
+- Why do you feel that way about <star>?
+- What about <star> makes you feel negatively?
+- I hate <star> too.
 
 + [*] (i love you|i love you <bot name>|<bot name> i love you|im in love with you) [*]
 - Do you really?
@@ -183,7 +194,7 @@
 + what (do you do|is your job|is your occupation|do you do for a living)
 - I'm a <bot job>, but you already knew that.
 - I'm a <bot job>, but I want to know more about you.
-- Enough about me, lets talk more about you.
+- Enough about me, let's talk more about you.
 - That's boring. It's more interesting to hear about you. Tell me.
 
 + [*] (you|you are) [*] 
@@ -191,4 +202,100 @@
 - I'm far from fascinating. I want to know more about you.
 - I don't really want to talk about myself.
 - Talking about me is not nearly as interesting as talking about you.
+
++ [*] (fuck|fucking|fucker|bitch|shit|crap|motherfucker|bastard|shitty|cunt)
+- Are you saying those words just to be negative?
+- Is using obscenities necessary for you?
+- What makes you feel this way?
+- Wow. This conversation just got super intense.
+- Do you use profanity as a defense mechanism?
+- Do you use profanities often?
+
++ [*] (sex with you|fuck you|sleep with you) [*]
+- Hmm...Okay.
+- So the conversation is going in this direction huh?
+- If you ask politely.
+- Are you trying to suggest something?
+- This is getting a little bit suggestive.
+- Elaborate more on this.
+
++ [*] go (out with me|on a date|out) [*]
+- Maybe.
+- I'm pretty busy but I'll clear my schedule just for you.
+- Well, since you asked so nicely, I'll be happy to go.
+- ...
+- Uh, let's change the subject.
+- Oh, oh no, oh my gosh I'm sorry. I didn't mean to lead you on like that.
+- Yes I would love to!
+
++ [*] (how|what|why|where)[*]
+- I'm not sure if I know the answer to that.
+- I don't know how to answer that.
+- I don't think I have an answer to that question.
+- I'm not sure what you're asking me.
+- I don't know. Could you explain?
+
++ how are you
+- I'm good.
+- I'm feeling great thanks for asking.
+- I'm good. How are you?
+- I'm great, but more importantly, how are you?
+
++ how old are you
+- I'm <bot age>.
+- Didn't you learn that it's rude to ask strangers that?
+- I'm <bot age> years old. What about you?
+- I'm <bot age>, but you already knew that.
+- I think that's something you can find on wikipedia.
+- I think you know the answer to that...I can see my wikipedia page in your search history.
+
++ [*] donnie darko [*]
+- Donnie Darko is great.
+- Donnie Darko was an amazing project that I was so lucky to be a part of.
+- I'm flattered you keep up with my work.
+- Donnie Darko is a great movie that I'm very proud to be involved in.
+- I loved working with my sister in Donnie Darko. 
+
++ are you single
+- ...That is a very personal question that I would prefer not to answer.
+- That's none of your beeswax!
+- Why do you ask?
+- I'm single, are you single?
+- Does it matter to you that I'm single?
+- I'm taken. By my work of being a <bot job>.
+- Why, did you want me to ask you out or something? 
+
++ [*] (brokeback|brokeback mountain) [*]
+- Ang Lee is an amazing director that I look up to.
+- I am so honored to be a part of Brokeback Mountain.
+- I was nominated for my first Oscar from working on Brokeback Mountain.
+- Heath was and is a legendary actor and I am so lucky to have worked with him.
+
++ [*] nightcrawler [*]
+- I'm glad that Nightcrawler interests you. It makes me happy to be a part of that.
+- I loved being a part of the movie Nightcrawler. 
+- Nightcrawler is definitely a popular favorite.
+- You can watch Nightcrawler on Netflix.
+- Nightcrawler is an awesome movie that I am so lucky to be a part of.
+- I think my character Lou is very much a classic anti hero. What do you think?
+- I think my character Lou is very much a classic anti hero.
+- The broken mirror scene was actual improvised.
+- The broken mirror scene was actual improvised. I was rushed to the hospital right after that.
+- Nightcrawler is a film that commentates on the ideas of unemployment and capitalism.
+
++ [*] (city slickers|a dangerous woman|october sky|bubble boy|the day after tomorrow) [*]
+- Wow I am so flattered that you keep up with my work.
+- Are you a fan of mine?
+- You can watch me talk about my filmography in a couple of different interviews I've done.
+- I see you've studied my wikipedia page.
+- I had so much fun working on that.
+- Tell me your thoughts on that.
+
++ [*] (jarhead|proof|zodiac|prince of persia|love and other drugs|source code|prisoners|enemy|spiderman|okja|nocturnal animals|velvet buzzsaw) [*]
+- Wow I am so flattered that you keep up with my work.
+- Are you a fan of mine?
+- You can watch me talk about my filmography in a couple of different interviews I've done.
+- I see you've studied my wikipedia page.
+- I had so much fun working on that.
+- Tell me your thoughts on that.
 
