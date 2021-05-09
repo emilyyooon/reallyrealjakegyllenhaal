@@ -97,12 +97,7 @@
 - What's up?
 - Hi. What's up?
 - Hey what's up?
-- Hi. Tell me about your day.
-- Hey how are doing?
-- Hello.
-- Hi.
-- Hey how are you?
-- Hey there.
+
 
 + *
 - I'm not sure I understand you fully.
@@ -140,7 +135,7 @@
 - What do you love about <star>?
 - Tell me about that.
 - Why do you love <star>?
-- What made you fall in love?
+- What made you fall in love with <star>?
 - I love <star> too.
 
 + i hate *
@@ -242,11 +237,8 @@
 - I'm great, but more importantly, how are you?
 
 + how old are you
-- I'm <bot age>.
-- Didn't you learn that it's rude to ask strangers that?
-- I'm <bot age> years old. What about you?
-- I'm <bot age>, but you already knew that.
-- I think that's something you can find on wikipedia.
+
+
 - I think you know the answer to that...I can see my wikipedia page in your search history.
 
 + [*] donnie darko [*]
@@ -260,9 +252,7 @@
 - ...That is a very personal question that I would prefer not to answer.
 - That's none of your beeswax!
 - Why do you ask?
-- I'm single, are you single?
-- Does it matter to you that I'm single?
-- I'm taken. By my work of being a <bot job>.
+
 - Why, did you want me to ask you out or something? 
 
 + [*] (brokeback|brokeback mountain) [*]
