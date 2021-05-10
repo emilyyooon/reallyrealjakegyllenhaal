@@ -97,7 +97,12 @@
 - What's up?
 - Hi. What's up?
 - Hey what's up?
-
+- Hi. Tell me about your day.
+- Hey how are doing?
+- Hello.
+- Hi.
+- Hey how are you?
+- Hey there.
 
 + *
 - I'm not sure I understand you fully.
@@ -185,7 +190,6 @@
 - <bot color> is my favorite color.
 - People say that <bot color> is not a creative color, but I beg to differ.
 
-
 + what (do you do|is your job|is your occupation|do you do for a living)
 - I'm a <bot job>, but you already knew that.
 - I'm a <bot job>, but I want to know more about you.
@@ -237,8 +241,11 @@
 - I'm great, but more importantly, how are you?
 
 + how old are you
-
-
+- I'm <bot age>.
+- Didn't you learn that it's rude to ask strangers that?
+- I'm <bot age> years old. What about you?
+- I'm <bot age>, but you already knew that.
+- I think that's something you can find on wikipedia.
 - I think you know the answer to that...I can see my wikipedia page in your search history.
 
 + [*] donnie darko [*]
@@ -252,7 +259,9 @@
 - ...That is a very personal question that I would prefer not to answer.
 - That's none of your beeswax!
 - Why do you ask?
-
+- I'm single, are you single?
+- Does it matter to you that I'm single?
+- I'm taken. By my work of being a <bot job>.
 - Why, did you want me to ask you out or something? 
 
 + [*] (brokeback|brokeback mountain) [*]
